@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-            <link rel="stylesheet" href="assets/css/all.min.css">
-
+    <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
 
-
     <div class="sidebar">
         <h2>Menu</h2>
         <ul>
             <li><a href="#" onclick="showPage('orders')"><i class="fa-solid fa-cart-shopping p-1"></i>Orders</a></li>
-            <li><a href="#" onclick="showPage('messages')"><i class="fa-brands fa-facebook-messenger p-1"></i>Messages</a></li>
+            <li><a href="#" onclick="showPage('messages')"><i
+                        class="fa-brands fa-facebook-messenger p-1"></i>Messages</a></li>
         </ul>
     </div>
 
@@ -28,6 +27,9 @@
             <div class="order">
                 <h3>Product One</h3>
                 <p>Date Added: 2024-09-01</p>
+                <button onclick="showProductDetails()">
+                    <i class="fa-solid fa-arrow-right"></i> View Details
+                </button>
             </div>
         </div>
 
@@ -58,8 +60,44 @@
                 <button onclick="sendMessage()">Send</button>
             </div>
         </div>
-    </div>
 
+        <div id="product-details" class="page" style="display: none;">
+            <h2>Product Details</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date Added</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>2024-09-01</td>
+                        <td>$10.00</td>
+                        <td><button class="btn btn-danger" onclick="deleteProduct(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td>2024-09-02</td>
+                        <td>$15.00</td>
+                        <td><button class="btn btn-danger" onclick="deleteProduct(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Product 3</td>
+                        <td>2024-09-03</td>
+                        <td>$20.00</td>
+                        <td><button class="btn btn-danger" onclick="deleteProduct(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="showPage('orders')" class="bg-black p-2 text-white">
+                <i class="fa-solid fa-arrow-left"></i> Back to Orders
+            </button>
+        </div>
+    </div>
 
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>

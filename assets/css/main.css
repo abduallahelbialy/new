@@ -149,6 +149,42 @@ body {
 .chat-input button:hover {
     background-color: #555;
 }
+/* التأكد من أن جميع العناصر تظهر بشكل جيد في الصفحة */
+.content .order button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.content .order button:hover {
+    background-color: #555;
+}
+
+.page table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.page table th, .page table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.page table td button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.page table td button:hover {
+    background-color: #c82333;
+}
+
 
 @media (max-width: 768px) {
     body {
@@ -164,6 +200,11 @@ body {
     .content {
         width: 100% !important;
     }
+    .page table th, .page table td {
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+}
 }
 @media (max-width: 992px) {
     .content {

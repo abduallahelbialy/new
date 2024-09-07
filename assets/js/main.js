@@ -59,3 +59,31 @@ function sendMessage() {
 function closeChat() {
   document.getElementById("messages").style.display = "none";
 }
+function showPage(page) {
+  // إخفاء جميع الصفحات
+  document.querySelectorAll(".page").forEach(function (el) {
+    el.style.display = "none";
+  });
+
+  // عرض الصفحة المحددة
+  document.getElementById(page).style.display = "block";
+}
+
+// عرض صفحة التفاصيل عند الضغط على السهم
+function showProductDetails() {
+  showPage("product-details");
+}
+
+// حذف المنتج من الجدول
+function deleteProduct(button) {
+  const row = button.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+}
+
+// تعيين الصفحة الافتراضية
+document.getElementById("orders").style.display = "block";
+
+function closeChat() {
+  document.getElementById("messages").style.display = "none";
+}
+
