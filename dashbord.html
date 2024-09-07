@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#" onclick="showPage('orders')"><i class="fa-solid fa-cart-shopping p-1"></i>Orders</a></li>
+            <li><a href="#" onclick="showPage('messages')"><i class="fa-brands fa-facebook-messenger p-1"></i>Messages</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="orders" class="page">
+            <h2>Orders</h2>
+            <div class="order">
+                <h3>Product One</h3>
+                <p>Date Added: 2024-09-01</p>
+            </div>
+        </div>
+
+        <div id="messages" class="page" style="display: none;">
+            <div class="chat-header">
+                <span>Messages</span>
+                <button onclick="closeChat()">&#8592; Close</button>
+            </div>
+            <div class="chat-box" id="chatBox">
+                <div class="message">
+                    <img src="assets/images/image 47.png" alt="User 1" class="avatar">
+                    <div>
+                        <p><strong>Ahmed:</strong> Hello!</p>
+                        <span>2024-08-31 10:00 AM</span>
+                    </div>
+                </div>
+                <div class="message reply">
+                    <img src="assets/images/istockphoto-1449832348-612x612-removebg-preview.png" alt="User 2"
+                        class="avatar">
+                    <div>
+                        <p><strong>Abduallh:</strong> Hi there!</p>
+                        <span>2024-08-31 10:05 AM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatMessage" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
